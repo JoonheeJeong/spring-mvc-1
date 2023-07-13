@@ -10,16 +10,17 @@ import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
 @Controller
+@RequestMapping("/springmvc/v2/members")
 public class SpringMemberControllerV2 {
 
     private final MemberRepository memberRepository = MemberRepository.getInstance();
 
-    @RequestMapping("/springmvc/v2/members/new-form")
+    @RequestMapping("/new-form")
     public ModelAndView getNewForm() {
         return new ModelAndView("new-form");
     }
 
-    @RequestMapping("/springmvc/v2/members/save")
+    @RequestMapping("/save")
     public ModelAndView save(HttpServletRequest req) {
         String username = req.getParameter("username");
         Integer age = Integer.valueOf(req.getParameter("age"));
@@ -32,7 +33,7 @@ public class SpringMemberControllerV2 {
         return mav;
     }
 
-    @RequestMapping("/springmvc/v2/members")
+    @RequestMapping
     public ModelAndView getList() {
         List<Member> members = memberRepository.findAll();
 
