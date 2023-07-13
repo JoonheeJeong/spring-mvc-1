@@ -1,4 +1,4 @@
-package inflearn.kimyounghan.mvc1.servlet.springmvc.old;
+package inflearn.kimyounghan.mvc1.servlet.web.springmvc.old;
 
 import org.springframework.stereotype.Component;
 import org.springframework.web.HttpRequestHandler;
